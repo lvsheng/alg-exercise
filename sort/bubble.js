@@ -1,3 +1,9 @@
+/**
+ * 思路：
+ *  找最小，再找子集最小。
+ * @param a
+ * @returns {*}
+ */
 module.exports = function bubbleSort (a) {
     var n = a.length;
     var t;

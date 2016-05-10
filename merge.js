@@ -1,3 +1,9 @@
+/**
+ * 思路：min(min(a), min(b)) === min(a.concat(b))。去除最小后再递归处理剩余
+ * @param a {Array}
+ * @param b {Array}
+ * @returns {Array}
+ */
 module.exports = function (a, b) {
     var c = [];
     var i = 0;

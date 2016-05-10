@@ -12,6 +12,7 @@ module.exports = function mergeSort (a) {
 };
 
 /**
+ * 思路：分治、等分分治：找子集解，再合并为全集解
  * @pre j > i 即 j - i >= 1
  * @param a
  * @param i
