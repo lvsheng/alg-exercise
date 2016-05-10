@@ -1,14 +1,19 @@
 module.exports = function (a, b) {
-    a = a.slice();
-    b = b.slice();
     var c = [];
-    while (a.length && b.length) {
-        console.log(a, b, c);
-        if (a[0] < b[0]) {
-            c.push(a.shift());
+    var i = 0;
+    var j = 0;
+    while (i < a.length && j < b.length) {
+        if (a[i] < b[j]) {
+            c[i + j] = a[i++];
         } else {
-            c.push(b.shift());
+            c[i + j] = b[j++];
         }
     }
-    return c.concat(a).concat(b);
+    for (i; i < a.length; ++i) {
+        c[i + j] = a[i];
+    }
+    for (j; j < b.length; ++j) {
+        c[i + j] = b[j];
+    }
+    return c;
 };
