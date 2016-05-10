@@ -1,3 +1,4 @@
+var util = require('./util');
 var merge = require('./merge');
 [
     [
@@ -7,5 +8,7 @@ var merge = require('./merge');
 ].forEach(function (arrs) {
         var a = arrs[0];
         var b = arrs[1];
-        console.log(a, b, merge(a, b));
+        var result = merge(a, b);
+        console.log(a, b, result);
+        console.assert(util.sameArray(result, util.sort(result)));
     });

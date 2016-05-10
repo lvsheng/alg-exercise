@@ -1,3 +1,4 @@
+var util = require('../util');
 var bubble = require('./bubble');
 
 [
@@ -5,10 +6,6 @@ var bubble = require('./bubble');
     [123, 4243, 2, 12, 8, 1, 0, 4, 5, 2, 112, 3, 56]
 ].forEach(function (arr) {
         var result = bubble(arr.slice());
-        console.log(result);
-        console.assert(arr.slice().sort(function (a, b) {
-            return a - b;
-        }).every(function (v, i) {
-            return v === result[i];
-        }));
+        console.log(arr, result);
+        console.assert(util.sameArray(util.sort(arr), result));
     });
