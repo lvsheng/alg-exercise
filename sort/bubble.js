@@ -1,4 +1,4 @@
-module.exports = function (a) {
+module.exports = function bubbleSort (a) {
     var n = a.length;
     var t;
     for (var i = 0; i < n - 1; ++i) {
